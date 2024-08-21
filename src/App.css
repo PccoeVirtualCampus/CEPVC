@@ -1,38 +1,93 @@
+/* General App Styles */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Rectangle Styles */
+.rectangle {
+  width: 600px;
+  height: 200px;
+  border: 2px solid black;
+  margin: 80px auto;
+  display: flex;
+  background-color: rgb(231, 218, 194);
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Room Buttons and Floor Label */
+.room-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.room-container.left {
+  margin-left: 20px;
+  
+}
+
+.room-container.right {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.room {
+  width: 100%;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
+  background-color: rgb(163, 135, 110);
 }
 
-.App-link {
-  color: #61dafb;
+.floor-label {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Modal Styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  max-width: 80%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+form {
+  margin-bottom: 40px; /* Add space below the form */
+}
+form div {
+  margin-bottom: 20px; /* Space between each form entry */
 }
